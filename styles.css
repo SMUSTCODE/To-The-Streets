@@ -1,0 +1,356 @@
+
+
+/* PHONE VERSION */
+@media only screen and
+(min-width: 320px) {
+}
+/* TABLET VERSION */
+@media only screen and
+(min-width: 768px) {
+}
+/* DESKTOP VERSION */
+@media only screen and
+(min-width: 20px) {
+}
+
+.header{
+    height: 85vh;
+    width: 90%;
+    background-image: url(./Images/whitelogo_whitespace.png);
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    padding-top: 70px;
+    padding-bottom: -400cap;
+    margin-left: 100px;
+}
+.header_thumbnail{
+  height: 25vh;
+  width: 25%;
+  background-image: url(./Images/whitelogo_whitespace.png);
+  background-position:left;
+  background-size:cover;
+  position:relative;
+  margin-left: 25px;
+  padding-top: 70px;
+  
+}
+
+.aboutimage{
+  height: 85vh;
+  width: 90%;
+  background-image: url(./Images/aboutusimage.png);
+  background-position:center;
+  background-size:cover;
+  position:relative;
+  padding-top: 70px;
+  padding-bottom: -400cap;
+  margin-left: 100px;
+
+}
+
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+ .maincontent h1{
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  padding-top: 0%;
+  margin-top: 0;
+  position: relative;
+  font-kerning: 20px;
+ }
+
+ .maincontent p1{
+  font-family: 'Quattrocento', serif;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  margin-top: 0;
+  position: relative;
+ }
+
+ .abouttitle h1{
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 80px;
+  text-align: left;
+  padding-top: 0%;
+  margin-top: 5%;
+  margin-left: 5%;
+  position: relative;
+ }
+ .abouttitle h2{
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 40px;
+  text-align: left;
+  padding-top: 0%;
+  margin-top: 2%;
+  margin-left: 5%;
+  position: relative;
+ }
+
+ .abouttitle p{
+  font-family: 'Quattrocento', serif;
+  color: white;
+  font-size: 40px;
+  text-align: left;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  margin-top: 0;
+  position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
+
+ }
+
+ .displayme {
+  display: none;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Quattrocento', serif;
+  line-height: 150%;
+  padding-top: 0;
+
+}
+
+table {
+display: none;
+color: white;
+font-size: 25px;
+text-align: center;
+font-family: 'Quattrocento', serif;
+
+}
+ 
+
+/**menu bar side */ 
+
+ #menuToggle
+ {
+   display: block;
+   position: fixed;
+   top: 50px;
+   left: 50px;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: tomato;
+ }
+ 
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /** hamburger bar */
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #cdcdcd;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ /** hide middle bar with x */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * last goes  the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 125px;
+   font-family: "Bebas Neue", sans-serif;
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 50px;
+   font-family: "Bebas Neue", sans-serif;
+ }
+ 
+ /*
+  * slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+ /*end menu/*
+
+
+ /*first gallery page 1*/
+
+ div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+  /* p {
+    color: purple
+  } */
+}
+
+/* @media only screen and (max-width: 500px) {
+
+  p {
+    color: purple
+  }
+} */
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (max-width: 320px) {
+  p {
+    color: pink;
+  }
+}
+/*end first gallery page 1*/
+
+#desc{
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+}
+
+
+#maincontent a:hover {
+   color: tomato;
+}
