@@ -3,7 +3,9 @@ function toggleParagraph(event) {
     var paragraph = clickedHeading.nextElementSibling;
     var table = paragraph.nextElementSibling;
     if (paragraph.classList.contains("displayme")) {
-        if (paragraph.style.display === "none") {
+        // The paragraph.style property looks at the element's explicitly defined styles (e.g. <p style="display: none" />).
+        // You need to look at the calculated style.
+        if (window.getComputedStyle(paragraph).display === "none") {
             paragraph.style.display = "block";
             table.style.display = "block";
         } else {

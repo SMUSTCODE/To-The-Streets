@@ -356,6 +356,9 @@ div.desc {
 }
 
 
-#maincontent a:hover {
+/* maincontent is a class (<div class="maincontent") so needs to be selected using .maincontent.  The element inside is a h1, so needs to be h1 instead of a */
+.maincontent h1:hover {
    color: tomato;
+   /* makes the cursor change to a more familiar cursor for a link */
+   cursor: pointer;
 }
