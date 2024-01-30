@@ -161,6 +161,12 @@ font-family: 'Quattrocento', serif;
  {
    color: tomato;
  }
+
+ #menuToggle a:hover li::after
+ {
+    /* put anything you want to see when hovering on a link here */
+    content: ">";
+ }
  
  
  #menuToggle input
